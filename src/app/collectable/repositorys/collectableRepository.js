@@ -2,7 +2,7 @@ import queryString from 'query-string'
 const BASE_API_URL = 'https://api.opensea.io/api/v1/assets'
 
 export class CollectableRepository {
-  getCollectables({ address, offset = 0, limit = 20 }) {
+  getCollectables({ address, offset = 0, limit = 10 }) {
     const query = queryString.stringify({
       owner: address,
       offset,

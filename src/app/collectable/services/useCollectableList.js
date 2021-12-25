@@ -1,22 +1,25 @@
-import { useState } from 'react'
 import { CollectableRepository } from '@/app/collectable/repositorys'
 
 const repository = new CollectableRepository()
 
-export const useCollectableList = () => {
-  const [collectables, setCollectables] = useState([])
+// a count of each fetched items
+const PAGE_SIZE = 10
 
-  const getCollectables = async ({ address, offset }) => {
+export const useCollectableList = () => {
+  const getCollectables = async ({ address, pageIndex = 0 }) => {
     const collectables = await repository.getCollectables({
       address,
-      offset,
+      offset: pageIndex * PAGE_SIZE,
+      limit: PAGE_SIZE,
     })
 
-    setCollectables(collectables)
+    return {
+      pageIndex,
+      data: collectables,
+    }
   }
 
   return {
-    collectables,
     getCollectables,
   }
 }
