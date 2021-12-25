@@ -1,0 +1,1 @@
+export { CollectableRepository } from './collectableRepository'
