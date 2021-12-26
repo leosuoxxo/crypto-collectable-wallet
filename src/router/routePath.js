@@ -1,4 +1,4 @@
 export const RoutePath = {
   Root: '/',
-  Detail: '/:tokenId',
+  Detail: '/:collectableId',
 }

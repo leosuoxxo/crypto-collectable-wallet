@@ -1,5 +1,8 @@
 import { useRoutes } from 'react-router-dom'
-import { CollectableList } from '@/app/collectable/components'
+import {
+  CollectableList,
+  CollectableDetail,
+} from '@/app/collectable/components'
 import { RoutePath } from './routePath'
 
 export const appRoutes = [
@@ -8,11 +11,11 @@ export const appRoutes = [
     element: <CollectableList />,
     exact: true,
   },
-  // {
-  //   path: RoutePath.Detail,
-  //   element: <CollectableDetail />,
-  //   exact: true,
-  // },
+  {
+    path: RoutePath.Detail,
+    element: <CollectableDetail />,
+    exact: true,
+  },
 ]
 
 export const AppRouter = () => {

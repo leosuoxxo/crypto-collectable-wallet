@@ -1,5 +1,6 @@
 import { BrowserRouter } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from 'react-query'
+import { ChakraProvider } from '@chakra-ui/react'
 import { AppRouter } from './router'
 
 const queryClient = new QueryClient({
@@ -13,9 +14,11 @@ const queryClient = new QueryClient({
 function App() {
   return (
     <BrowserRouter>
-      <QueryClientProvider client={queryClient}>
-        <AppRouter />
-      </QueryClientProvider>
+      <ChakraProvider>
+        <QueryClientProvider client={queryClient}>
+          <AppRouter />
+        </QueryClientProvider>
+      </ChakraProvider>
     </BrowserRouter>
   )
 }
