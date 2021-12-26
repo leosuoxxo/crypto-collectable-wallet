@@ -13,12 +13,19 @@
     "@chakra-ui/react": "^1.7.3",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^6.0.3",
+    "events": "^3.3.0",
     "framer-motion": "^4",
+    "process": "^0.11.10",
     "query-string": "^7.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-query": "^3.34.6",
-    "react-router-dom": "^6.2.1"
+    "react-router-dom": "^6.2.1",
+    "stream-browserify": "^3.0.0",
+    "util": "^0.12.4",
+    "web3": "^1.6.1"
   },
   "devDependencies": {
     "@1e05u/eslint-basic-config": "^1.0.4",

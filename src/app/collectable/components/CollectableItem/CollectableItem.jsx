@@ -5,7 +5,8 @@ export const CollectableItem = ({ data }) => {
   const navigate = useNavigate()
 
   const handleClick = () => {
-    navigate(`/${data.token_id}`)
+    const { address } = data.asset_contract
+    navigate(`/${address}/${data.token_id}`)
   }
 
   return (

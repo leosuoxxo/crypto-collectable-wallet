@@ -1,4 +1,5 @@
 import { useInfiniteQuery } from 'react-query'
+import { useWalletService } from '@/services/useWallet'
 import { CollectableRepository } from '@/app/collectable/repositorys'
 
 const repository = new CollectableRepository()
@@ -7,6 +8,8 @@ const repository = new CollectableRepository()
 const PAGE_SIZE = 10
 
 export const useCollectableList = () => {
+  const { account } = useWalletService()
+
   const getCollectables = async ({ address, pageIndex = 0 }) => {
     const collectables = await repository.getCollectables({
       address,
@@ -24,7 +27,7 @@ export const useCollectableList = () => {
     'collectables',
     async ({ pageParam = 0 }) =>
       getCollectables({
-        address: '0x960DE9907A2e2f5363646d48D7FB675Cd2892e91',
+        address: account,
         pageIndex: pageParam,
       }),
     {

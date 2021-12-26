@@ -1,5 +1,6 @@
 import queryString from 'query-string'
 const BASE_API_URL = 'https://api.opensea.io/api/v1'
+// const BASE_API_URL = 'https://testnets-api.opensea.io'
 
 export class CollectableRepository {
   getCollectableById({ address, id }) {

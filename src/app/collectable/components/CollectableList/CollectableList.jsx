@@ -18,7 +18,7 @@ export const CollectableList = () => {
   })
 
   return (
-    <Flex wrap="wrap">
+    <Flex wrap="wrap" width="100vw">
       {isLoading && <Loading />}
       {data &&
         data.pages.map((page, index) => (

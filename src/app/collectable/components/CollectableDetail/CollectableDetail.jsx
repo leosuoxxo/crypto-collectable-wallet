@@ -15,9 +15,11 @@ import { RoutePath } from '@/router/routePath'
 
 export const CollectableDetail = () => {
   const navigate = useNavigate()
-  const { collectableId } = useParams()
-  const { data, isLoading, isError, error } =
-    useCollectableDetail(collectableId)
+  const { contractAddress, collectableId } = useParams()
+  const { data, isLoading, isError, error } = useCollectableDetail({
+    collectableId,
+    contractAddress,
+  })
 
   const permalinkClick = () => {
     window.open(data.permalink)

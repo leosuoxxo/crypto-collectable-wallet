@@ -1,6 +1,7 @@
 import { BrowserRouter } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { ChakraProvider } from '@chakra-ui/react'
+import { WalletProvider } from '@/services/useWallet'
 import { AppRouter } from './router'
 
 const queryClient = new QueryClient({
@@ -16,7 +17,9 @@ function App() {
     <BrowserRouter>
       <ChakraProvider>
         <QueryClientProvider client={queryClient}>
-          <AppRouter />
+          <WalletProvider>
+            <AppRouter />
+          </WalletProvider>
         </QueryClientProvider>
       </ChakraProvider>
     </BrowserRouter>

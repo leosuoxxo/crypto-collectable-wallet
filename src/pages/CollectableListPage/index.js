@@ -1,0 +1,1 @@
+export { CollectableListPage } from './CollectableListPage'

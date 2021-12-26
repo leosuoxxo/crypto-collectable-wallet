@@ -1,0 +1,1 @@
+export { CollectableDetailPage } from './CollectableDetailPage'

@@ -1,19 +1,16 @@
 import { useRoutes } from 'react-router-dom'
-import {
-  CollectableList,
-  CollectableDetail,
-} from '@/app/collectable/components'
+import { CollectableListPage, CollectableDetailPage } from '@/pages'
 import { RoutePath } from './routePath'
 
 export const appRoutes = [
   {
     path: RoutePath.Root,
-    element: <CollectableList />,
+    element: <CollectableListPage />,
     exact: true,
   },
   {
     path: RoutePath.Detail,
-    element: <CollectableDetail />,
+    element: <CollectableDetailPage />,
     exact: true,
   },
 ]
